@@ -1,0 +1,17 @@
+{% extends 'base.html'%} {% import "bootstrap/wtf.html" as wtf %} {% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index5.css')}}"> {% endblock %} {% block content %}
+<div class="container">
+    <div class="row">
+        <br>
+        <h3 class="text-center"><i class="fa fa-plus" aria-hidden="true"></i> NEW PITCH</h3>
+        <hr> <br>
+        <div class="col-md-3"></div>
+
+        <div class="col-md-6">
+            {{ wtf.quick_form(form) }}
+        </div>
+
+        <div class="col-md-3"></div>
+    </div>
+</div>
+{% endblock %}

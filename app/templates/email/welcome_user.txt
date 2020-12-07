@@ -1,0 +1,4 @@
+Hello {{user.username}}
+Welcome to your pitch your world
+You have signed up for our incredible services and feel welcomed to the family. 
+Please enjoy the reviews of your favourite pitch section.
