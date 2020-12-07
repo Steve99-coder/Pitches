@@ -1,0 +1,45 @@
+{% extends 'base.html'%} {% import "bootstrap/wtf.html" as wtf %} {% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index8.css')}}"> {% endblock %} {% block content %}
+
+<body>
+    <br>
+    <hr>
+    <h3 class="text-center">PITCHES</h3>
+    <a href="../pitch/"> <button type="button" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> New Pitch</button></a>
+    <br><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+
+            <div class="col-md-6">
+                <div class="card-columns">
+                    {% for category in category[::-1] %}
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <p><i class="fa fa-user-circle" aria-hidden="true"></i> {{category.author}}</p>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{category.title}}</h5>
+                            <p class="card-text"><i class="fas fa-pen-square"></i> {{category.pitch}}</p>
+                            <a href="/new_comment/{{category.id}}"> <button type="button" class="btn btn-primary btn-sm">Comment  <i class="fa fa-comment" aria-hidden="true"></i></button> </a>
+
+                            <a href="/comments/{{category.id}}"><button type="button" class="btn btn-primary btn-sm">View comments  <i class="fa fa-comments" aria-hidden="true"></i></button></a> </div>
+                        <br>
+                        <div class="card-footer text-muted">
+                            <i class="fa fa-calendar" aria-hidden="true"></i> {{category.date.strftime('%Y-%m-%d')}}
+                        </div>
+                    </div>
+                    <hr>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3"></div>
+
+        {% endfor %}
+    </div>
+    </div>
+</body>
+{% endblock %}

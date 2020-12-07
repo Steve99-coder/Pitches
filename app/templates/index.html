@@ -1,0 +1,45 @@
+{% extends 'base.html'%} {% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index3.css')}}"> {% endblock %} {% block content %}
+<div class="jumbotron" style="margin-top:0;">
+    <h2 class="text-center">WELCOME </h2>
+    <h2 class="text-center">TO YOUR PITCH YOUR WORLD <i class="fa fa-globe" aria-hidden="true"></i></h2>
+    <p class="text-center">In life, you only have 60 seconds to impress someone and say something meaningful.!!!</p>
+</div>
+
+<body>
+
+    <div class="container">
+        <div class="d-flex justify-content-center row">
+            <div class="card-groups">
+                <div class="card border-info mb-3 col-md-4">
+                    <div class="card-body">
+                        <h2 class="card-title">Interview Pitch</h2>
+                        <p class="card-text">"A word of advice: your interview is about you. It's not about the school you went to, what you majored in, what your GPA was, or who your parents happen to be or know. Most of that stuff is right on your resume, and it m i even
+                            even have gotten you into the room, but it won't get you much farther."</p>
+                        <a href="/categories/Interview"><button class="btn btn-primary">View</button></a>
+                    </div>
+                </div>
+                <div class="card border-info mb-3 col-md-4">
+                    <div class="card-body">
+                        <h2 class="card-title">Pickup lines Pitch</h2>
+                        <p class="card-text">"I’m no mathematician, but I’m pretty good with numbers. Tell you what, give me yours and watch what I can do with it."</p>
+                        <br>
+                        <a href="/categories/Adverts" type="button"><button class="btn btn-primary">View</button></a>
+                    </div>
+                </div>
+                <div class="card border-info mb-3 col-md-4">
+                    <div class="card-body ">
+                        <h2 class="card-title ">Product Pitch</h2>
+                        <p class="card-text ">"There is a saying that if you get something for free, you should know that you 're the product. It was never more true than in the case of Facebook and Gmail and YouTube. You get free social-media services, and you get free funny
+                            cat videos. In exchange, you give up the most valuable asset you have, which is your personal data."</p>
+                        <a href="/categories/Product"><button class="btn btn-primary">View</button></a>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock%}
